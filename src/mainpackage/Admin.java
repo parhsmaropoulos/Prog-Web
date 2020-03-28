@@ -6,13 +6,18 @@ public class Admin extends Users {
         super(username, name, surname, type, loggedin);
         super.type = "Admin";
     }
+    
+    public static void main(String[] args) {
+    	CreateUser("paris", "par", "mar", "Client");
+    }
 
     // Create a new User
-    public void CreateUser(String un, String n, String s, String type) {
+    public static void CreateUser(String un, String n, String s, String type) {
         //TODO add user to db
         switch (type){
             case "Client":
                 var client = new Client(un, n, s, type, false);
+                client.Register(un, n, s, type);
                 break;
             case  "Admin":
                 var admin = new Admin(un, n, s, type, false);

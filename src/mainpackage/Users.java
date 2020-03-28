@@ -6,6 +6,7 @@ public class Users {
     String surname;
     String type;
     Boolean loggedin;
+    //TODO implement password
 
     static int userCounter;
 
@@ -46,12 +47,16 @@ public class Users {
 
     // Register the user with the input field to the db
     public void Register(String un, String n, String s, String t) {
-
+    	var con = new PsqlCon();
         //TODO input validations
         System.out.println("User created successfully with the name : "+ n);
 
         //TODO input record to db
-        userCounter++;
+        String query = String.format("Insert into users(username, name, surname, type, logged) "+
+        				"values('%s', '%s', '%s', '%s', %b)", un, n, s, t, false);
+        
+        con.addUser(query);
+        userCounter = con.getCounter();
         System.out.println("The new user Counter is: " + userCounter);
     }
 

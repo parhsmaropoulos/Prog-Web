@@ -9,9 +9,9 @@ public class Client extends Users {
 
     public Client(String username, String name, String surname, String type, Boolean loggedin) {
         super(username, name, surname, type, loggedin);
-        super.type = "Client";
+        var user = new Users(username, name, surname, type, loggedin);
         setAFM();
-        this.PhoneNumber = PhoneNumber;
+        
     }
 
     public void ShowBills() {
