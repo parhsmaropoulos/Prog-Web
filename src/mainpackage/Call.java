@@ -8,11 +8,22 @@ public class Call {
 	
 	
 	
-	public Call(int time, int fromNumber, int toNumber) {
-		super();
-		Time = time;
-		FromNumber = fromNumber;
-		ToNumber = toNumber;
+	public Call(int fromNumber, int toNumber) {
+		this.FromNumber = fromNumber;
+		this.ToNumber = toNumber;
+		makeCall(FromNumber, ToNumber);
+	}
+	
+	public void makeCall(int f, int t) {
+		//TODO save call to db
+		//TODO check if can call free
+		System.out.println(String.format("Number: %d called number: %d",f,t));
+		alterProgram(f);
+	}
+	
+	static void alterProgram(int number) {
+		//TODO increase calls done by this number
+		System.out.println("Number:"+number+" made a call , increase its count");
 	}
 	
 	

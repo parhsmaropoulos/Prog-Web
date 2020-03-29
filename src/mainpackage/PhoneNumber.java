@@ -4,13 +4,16 @@ public class PhoneNumber {
     int phoneNumber;
     int ProgramID;
 
-    public PhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public PhoneNumber() {
+        this.phoneNumber = generatePhoneNumber();
+    }
+    
+    public int generatePhoneNumber() {
+    	this.phoneNumber = 98345;
+    	return phoneNumber;
     }
 
-    public void MakeCall() {
-        //TODO create call object and start a call
-    }
+    
     public int getPhoneNumber() {
         return phoneNumber;
     }

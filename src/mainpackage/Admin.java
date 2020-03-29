@@ -2,9 +2,8 @@ package mainpackage;
 
 public class Admin extends Users {
 
-    public Admin(String username, String name, String surname, String type, Boolean loggedin) {
-        super(username, name, surname, type, loggedin);
-        super.type = "Admin";
+    public Admin(String username, String name, String surname, String type) {
+        super(username, name, surname, type);
     }
     
     public static void main(String[] args) {
@@ -16,14 +15,14 @@ public class Admin extends Users {
         //TODO add user to db
         switch (type){
             case "Client":
-                var client = new Client(un, n, s, type, false);
+                var client = new Client(un, n, s, type);
                 client.Register(un, n, s, type);
                 break;
             case  "Admin":
-                var admin = new Admin(un, n, s, type, false);
+                var admin = new Admin(un, n, s, type);
                 break;
             case "Seller":
-                var seller = new Seller(un, n, s, type, false);
+                var seller = new Seller(un, n, s, type);
         }
     }
 

@@ -10,19 +10,16 @@ public class Users {
 
     static int userCounter;
 
-    public Users(String username, String name, String surname, String type, Boolean loggedin) {
+    public Users(String username, String name, String surname, String type) {
         this.username = username;
         this.name = name;
         this.surname = surname;
         this.type = type;
-        this.loggedin = loggedin;
+        this.Register(username, name, surname, type);
+        
     }
 
     public static void main(String[] args) {
-
-        var user = new Users("parismaro", "parhs", "maro", "admin", false);
-        var client = new Client(user.username, user.name, user.surname,user.type, user.loggedin);
-
     }
 
 
@@ -50,14 +47,28 @@ public class Users {
     	var con = new PsqlCon();
         //TODO input validations
         System.out.println("User created successfully with the name : "+ n);
+        
+        switch (t)
+        {
+        case "Client":
+            System.out.println("Client created successfully with the name : "+ n);
+            break;
+        case "Admin":
+            System.out.println("Admin created successfully with the name : "+ n);
+            break;
+        case "Seller":
+            System.out.println("Seller created successfully with the name : "+ n);
+            break;
+        
+        }
 
         //TODO input record to db
-        String query = String.format("Insert into users(username, name, surname, type, logged) "+
-        				"values('%s', '%s', '%s', '%s', %b)", un, n, s, t, false);
-        
-        con.addUser(query);
-        userCounter = con.getCounter();
-        System.out.println("The new user Counter is: " + userCounter);
+//        String query = String.format("Insert into users(username, name, surname, type, logged) "+
+//        				"values('%s', '%s', '%s', '%s', %b)", un, n, s, t, false);
+//        
+//        con.addUser(query);
+//        userCounter = con.getCounter();
+//        System.out.println("The new user Counter is: " + userCounter);
     }
 
     public String getUsername() {

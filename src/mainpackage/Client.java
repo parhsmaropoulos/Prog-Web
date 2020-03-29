@@ -7,13 +7,22 @@ public class Client extends Users {
     int PhoneNumber;
 
 
-    public Client(String username, String name, String surname, String type, Boolean loggedin) {
-        super(username, name, surname, type, loggedin);
-        var user = new Users(username, name, surname, type, loggedin);
-        setAFM();
-        
+    public Client(String username, String name, String surname, String type) {
+        super(username, name, surname, type);
     }
 
+    public int GetNumber() {
+    	var Number = new PhoneNumber();
+    	Number.getPhoneNumber();
+    	System.out.print("phone number is:"+ Number.getPhoneNumber());
+    	return Number.getPhoneNumber();
+    }
+    
+    public void MakeCall(int from, int to) {
+        //TODO create call object and start a call
+    	var call = new Call(from, to);
+    }
+    
     public void ShowBills() {
         //TODO show bills
     }

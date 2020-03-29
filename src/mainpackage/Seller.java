@@ -8,13 +8,13 @@ public class Seller extends Users {
 
 
 
-    public Seller(String username, String name, String surname, String type, Boolean loggedin) {
-        super(username, name, surname, type, loggedin);
+    public Seller(String username, String name, String surname, String type) {
+        super(username, name, surname, type);
         super.type = "Seller";
     }
 
     public void AddUser(String un, String n, String s) {
-        var user = new Users(un, n, s, "Client", false);
+        var user = new Users(un, n, s, "Client");
         ClientNames.add(user.name);
     }
 
