@@ -18,9 +18,13 @@ public class Seller extends Users {
         ClientNames.add(user.name);
     }
 
-    public void BillIssue(String un) {
+    public Bill BillIssue(Client cl, String month, float price) {
         //TODO create a struct for bills with client details
-        return;
+    	var phnum = cl.GetNumber();
+    	Bill bill = new Bill(phnum, month, price);
+    	System.out.print("The bill for : "+ phnum+" for "+ month+ " is :" + price +"\n");
+    	cl.addBill(bill);
+        return bill;
     }
 
     public void changePacckage(String un, String oldp, String newp) {

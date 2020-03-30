@@ -1,11 +1,14 @@
 package mainpackage;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Client extends Users {
     int AFM;
     int PhoneNumber;
-
+    List<Bill> Bills = new ArrayList<Bill>();
+    List<Bill> CompletedBills = new ArrayList<Bill>();
 
     public Client(String username, String name, String surname, String type) {
         super(username, name, surname, type);
@@ -14,7 +17,7 @@ public class Client extends Users {
     public int GetNumber() {
     	var Number = new PhoneNumber();
     	Number.getPhoneNumber();
-    	System.out.print("phone number is:"+ Number.getPhoneNumber());
+    	System.out.print("phone number is:"+ Number.getPhoneNumber()+"\n");
     	return Number.getPhoneNumber();
     }
     
@@ -24,13 +27,20 @@ public class Client extends Users {
     }
     
     public void ShowBills() {
-        //TODO show bills
+        //TODO iterate through bills
+    	
+    	System.out.print("Bills: \n"+ Bills.get(0).price);
     }
 
     public void ShowCompletedBills() {
         //TODO show completed bills
+    	System.out.print("Completed bills : " + CompletedBills);
     }
-
+    
+    public void addBill(Bill bill) {
+    	Bills.add(bill);
+    }
+    
     public void ShowUnCompletedBills() {
         //TODO show uncompleted bills
     }
@@ -46,6 +56,7 @@ public class Client extends Users {
     public void setAFM() {
         //Generate a random AFM from 100000000 to 999999999
         int AFM = new Random().nextInt((999999999 - 100000000 + 1) + 100000000);
+        System.out.print("New AFM is :" + AFM +"\n");
         //TODO check if AFM exist
         this.AFM = AFM;
     }

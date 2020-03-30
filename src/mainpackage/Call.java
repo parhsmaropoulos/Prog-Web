@@ -17,7 +17,7 @@ public class Call {
 	public void makeCall(int f, int t) {
 		//TODO save call to db
 		//TODO check if can call free
-		System.out.println(String.format("Number: %d called number: %d",f,t));
+		System.out.println(String.format("Number: %d called number: %d"+"\n",f,t));
 		alterProgram(f);
 	}
 	

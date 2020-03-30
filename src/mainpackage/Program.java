@@ -19,12 +19,16 @@ public class Program {
 	int TotalChargeThisMonth;
 	
 	
-	public Program(String name, int ID, int FCPM, int FMPM,Boolean CCA, int PPMo, int PPMe, int PPC ) {
+	public Program(String name, int FCPM, int FMPM,int CCA, int PPMo, int PPMe, int PPC ) {
 		this.Name = name;
-		this.ID = ID;
+//		this.ID = ID;
 		this.FreeCallsPerMonth = FCPM;
 		this.FreeMessagesPerMonth = FMPM;
-		this.CanCallAbroad = CCA;
+		if (CCA == 0) {
+			this.CanCallAbroad = false;
+		} else {
+			this.CanCallAbroad = true;
+		}
 		this.PricePerMonth = PPMo;
 		this.PricePerMessage = PPMe;
 		this.PricePerCall = PPC;

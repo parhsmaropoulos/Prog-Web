@@ -23,20 +23,22 @@ public class Users {
     }
 
 
-    public void LogIn (Boolean isLog) {
+    public void LogIn (String un, Boolean isLog) {
         //TODO check if un exits
         if (isLog == true) {
             System.out.println("Already logged in");
         } else {
+            System.out.println(un + " logged in Successfully.");
            setLoggedin(true);
         }
         return;
     }
 
-    public void LogOut(Boolean isLog) {
+    public void LogOut(String un, Boolean isLog) {
         if (isLog == false) {
-            System.out.println("Already logged out");
+            System.out.println("There is no active user");
         } else {
+            System.out.println(un + " logged out Successfully.");
             setLoggedin(false);
         }
         return;
@@ -46,18 +48,20 @@ public class Users {
     public void Register(String un, String n, String s, String t) {
     	var con = new PsqlCon();
         //TODO input validations
-        System.out.println("User created successfully with the name : "+ n);
         
         switch (t)
         {
         case "Client":
             System.out.println("Client created successfully with the name : "+ n);
+            userCounter++;
             break;
         case "Admin":
             System.out.println("Admin created successfully with the name : "+ n);
+            userCounter++;
             break;
         case "Seller":
             System.out.println("Seller created successfully with the name : "+ n);
+            userCounter++;
             break;
         
         }
@@ -68,7 +72,7 @@ public class Users {
 //        
 //        con.addUser(query);
 //        userCounter = con.getCounter();
-//        System.out.println("The new user Counter is: " + userCounter);
+        System.out.println("The new user Counter is: " + userCounter);
     }
 
     public String getUsername() {

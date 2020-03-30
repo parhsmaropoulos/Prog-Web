@@ -4,46 +4,45 @@ import java.util.List;
 
 public class Bill {
 
-	int NumberOfCall;
-	List<Call> Calls;
+//	int NumberOfCall = 1;
+//	List<Call> Calls;
 	String Month;
 	int PhoneNumber;
-	int price;
+	float price;
 	
 
 
-	public Bill(int PhoneNum, String month, int p) {
-		Month = month;
-		PhoneNumber = PhoneNum;
-		price = p;
+	public Bill(int PhoneNum, String month, float p) {
+		this.Month = month;
+		this.PhoneNumber = PhoneNum;
+		this.price = p;
 	}
 	
+//	public void addCall(Call call) {
+//		this.Calls.add(call);
+//	}
+//	
 	
-	public void addCall(Call call) {
-		this.Calls.add(call);
-	}
-	
-	
-	public int getPrice() {
+	public float getPrice() {
 		return price;
 	}
 	
 	
-	public void setPrice(int price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
-	public int getNumberOfCall() {
-		return NumberOfCall;
-	}
-	public void setNumberOfCall(int numberOfCall) {
-		NumberOfCall = numberOfCall;
-	}
-	public List<Call> getCalls() {
-		return Calls;
-	}
-	public void setCalls(List<Call> calls) {
-		Calls = calls;
-	}
+//	public int getNumberOfCall() {
+//		return NumberOfCall;
+//	}
+//	public void setNumberOfCall(int numberOfCall) {
+//		NumberOfCall = numberOfCall;
+//	}
+//	public List<Call> getCalls() {
+//		return Calls;
+//	}
+//	public void setCalls(List<Call> calls) {
+//		Calls = calls;
+//	}
 	public String getMonth() {
 		return Month;
 	}
