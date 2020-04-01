@@ -102,8 +102,7 @@ public class createUsers {
 					switch (choice)
 					{
 						case 1:
-							Users user = ((Admin)us).CreateUser();
-							usersList.add(user);
+							((Admin)us).CreateUser();
 							break;
 						case 2:
 							((Admin)us).CreateProgram();

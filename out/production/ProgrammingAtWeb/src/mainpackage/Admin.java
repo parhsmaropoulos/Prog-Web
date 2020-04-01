@@ -17,11 +17,10 @@ public class Admin extends Users {
     }
     
     // Create a new User
-    public static Users CreateUser() {
+    public static void CreateUser() {
         Scanner scan = new Scanner(System.in);
         Boolean flag = true;
         String t = null;
-        Users user = null;
 
         System.out.println("Fill in the fields to continue the registration!");
 
@@ -47,18 +46,13 @@ public class Admin extends Users {
             case "Client":
                 var client = new Client(un, n, s);
 //                client.Register(un, n, s, t);
-                user = client;
                 break;
             case  "Admin":
                 var admin = new Admin(un, n, s);
-                user = admin;
                 break;
             case "Seller":
                 var seller = new Seller(un, n, s);
-                user = seller;
-                break;
         }
-        return user;
     }
     
     // Print all progrm

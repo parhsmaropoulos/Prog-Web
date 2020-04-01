@@ -4,12 +4,6 @@
     <list default="true" id="3cff3b2a-dc17-400b-9bff-df5dc8ed8479" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProgrammingAtWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProgrammingAtWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProgrammingAtWeb/mainpackage/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProgrammingAtWeb/mainpackage/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProgrammingAtWeb/mainpackage/Seller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProgrammingAtWeb/mainpackage/Seller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProgrammingAtWeb/mainpackage/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProgrammingAtWeb/mainpackage/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Seller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/createUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/createUsers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,22 +121,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="300" y="194" key="FileChooserDialogImpl/0.0.1920.1040/-1366.163.1366.728@0.0.1920.1040" timestamp="1585646186022" />
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1585662209950">
+    <state width="1877" height="133" key="GridCell.Tab.0.bottom" timestamp="1585417741329">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.163.1366.728@0.0.1920.1040" timestamp="1585662209950" />
-    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1585662209950">
+    <state width="1877" height="133" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.163.1366.728@0.0.1920.1040" timestamp="1585417741329" />
+    <state width="1877" height="133" key="GridCell.Tab.0.center" timestamp="1585417741329">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.163.1366.728@0.0.1920.1040" timestamp="1585662209950" />
-    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1585662209950">
+    <state width="1877" height="133" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.163.1366.728@0.0.1920.1040" timestamp="1585417741329" />
+    <state width="1877" height="133" key="GridCell.Tab.0.left" timestamp="1585417741328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.163.1366.728@0.0.1920.1040" timestamp="1585662209950" />
-    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1585662209950">
+    <state width="1877" height="133" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.163.1366.728@0.0.1920.1040" timestamp="1585417741328" />
+    <state width="1877" height="133" key="GridCell.Tab.0.right" timestamp="1585417741329">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.163.1366.728@0.0.1920.1040" timestamp="1585662209950" />
+    <state width="1877" height="133" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.163.1366.728@0.0.1920.1040" timestamp="1585417741329" />
     <state x="0" y="14" key="SettingsEditor" timestamp="1585646198108">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -156,10 +150,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="342" y="140" key="new project wizard/0.0.1920.1040/-1366.163.1366.728@0.0.1920.1040" timestamp="1585243226938" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1585651272536">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1366.163.1366.728@0.0.1920.1040" timestamp="1585651272536" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585236098243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
