@@ -37,27 +37,13 @@ public class createUsers {
 					break;
 			}
 		}
-
-
-//		Bill bill = seller.BillIssue(client, "april", 20.50f);
-//		client.ShowBills();
-//
-////		try {
-////			admin.CreateProgram();
-////		} catch (IOException e) {
-////			// TODO Auto-generated catch block
-////			e.printStackTrace();
-////		}
-////
-////		admin.ShowPrograms();
-		
 	}
 
 	private static void showUsers(){
 		for (int i = 0; i <usersList.size(); i++)
 		{
 			var user = usersList.get(i);
-			System.out.println(user.username);
+			System.out.println(user.username + " type: "+ user.type + "\n");
 		}
 	}
 
@@ -92,6 +78,32 @@ public class createUsers {
 			System.out.println("This is the logged in menu choose your action:");
 			switch (us.type){
 				case "Client":
+					System.out.println("1: Show Details.");
+					System.out.println("2: Show Bills.");
+					System.out.println("3: Make Call.");
+					System.out.println("4: Show Call History.");
+					System.out.println("5: Logout.");
+					int clientchoice = Integer.parseInt(scan.nextLine());
+					switch (clientchoice)
+					{
+						case 1:
+							((Client)us).GetDetails((Client)us);
+							break;
+						case 2:
+							((Client)us).ShowBills();
+							break;
+						case 3:
+							int from = (((Client) us).getPhoneNumber());
+							System.out.println("Please type the phone number you want to call : ");
+							int to = Integer.parseInt(scan.nextLine());
+							((Client)us).MakeCall(from, to);
+							break;
+						case 4:
+							((Client)us).CallHistory();
+						case 5:
+							logged = false;
+							break;
+					}
 					break;
 				case "Admin":
 					System.out.println("1: Create a user.");
@@ -117,6 +129,27 @@ public class createUsers {
 					}
 					break;
 				case "Seller":
+					System.out.println("1: Create a user.");
+					System.out.println("2: Bill a client.");
+					System.out.println("3: Change a users program.");
+					System.out.println("4: Logout.");
+					int sellerchoice = Integer.parseInt(scan.nextLine());
+					switch (sellerchoice)
+					{
+						case 1:
+							Users user = ((Seller)us).AddUser();
+							usersList.add(user);
+							break;
+						case 2:
+//							((Seller)us).BillIssue(cl, month, price);
+							break;
+						case 3:
+//							((Seller)us).changePackage(un, oldp, newp);
+							break;
+						case 4:
+							logged = false;
+							break;
+					}
 					break;
 			}
 		}
@@ -153,7 +186,8 @@ public class createUsers {
 				var client = new Client(un, n, s);
 				client.setAFM();
 				var AFM = client.getAFM();
-				System.out.println("Client with username " + un + " created successfully and has AFM: " +  AFM);
+				client.GetNumber();
+				System.out.println("Client with username " + un + " created successfully");
 				usersList.add(client);
 				break;
 			case "Admin":

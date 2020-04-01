@@ -17,7 +17,7 @@ public class Admin extends Users {
     }
     
     // Create a new User
-    public static Users CreateUser() {
+    public Users CreateUser() {
         Scanner scan = new Scanner(System.in);
         Boolean flag = true;
         String t = null;

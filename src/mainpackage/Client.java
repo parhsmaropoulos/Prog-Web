@@ -4,32 +4,42 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+
 public class Client extends Users {
     int AFM;
     int PhoneNumber;
+    List<Call> CallHistory = new ArrayList<Call>();
     List<Bill> Bills = new ArrayList<Bill>();
     List<Bill> CompletedBills = new ArrayList<Bill>();
 
     public Client(String username, String name, String surname) {
         super(username, name, surname, "Client");
     }
+    
+    public void GetDetails(Client us) {
+    	printObject(us);
+    }
 
-    public int GetNumber() {
-    	var Number = new PhoneNumber();
-    	Number.getPhoneNumber();
-    	System.out.print("phone number is:"+ Number.getPhoneNumber()+"\n");
-    	return Number.getPhoneNumber();
+    public void GetNumber() {
+    	PhoneNumber Number = new PhoneNumber();
+    	int number= Number.getPhoneNumber();
+    	this.PhoneNumber = number;
     }
     
     public void MakeCall(int from, int to) {
         //TODO create call object and start a call
     	var call = new Call(from, to);
+    	CallHistory.add(call);
     }
     
     public void ShowBills() {
         //TODO iterate through bills
-    	
-    	System.out.print("Bills: \n"+ Bills.get(0).price);
+    	if (Bills.size() > 0) {
+    		System.out.print("Bills: \n"+ Bills.get(0).price);    		
+    	}
     }
 
     public void ShowCompletedBills() {
@@ -47,6 +57,11 @@ public class Client extends Users {
 
     public void CallHistory() {
         //TODO show call history
+    	if (CallHistory.size() > 0) {
+	    	for(int i = 0; i < CallHistory.size(); i ++) {
+	    		System.out.print("Call from :" + CallHistory.get(i).FromNumber + " to: " + CallHistory.get(i).ToNumber +"\n");
+	    	}
+    	}
     }
 
     public int getAFM() {
@@ -67,5 +82,9 @@ public class Client extends Users {
 
     public void setPhoneNumber(int phoneNumber) {
         PhoneNumber = phoneNumber;
+    }
+    public void printObject(Object object) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        System.out.println(gson.toJson(object));
     }
 }
